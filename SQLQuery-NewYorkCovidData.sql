@@ -1,3 +1,10 @@
+---I got the New York City Covid dataset from kaggle. It contains the total cases, total hospitalized and total deaths of 5 cities in New York. 
+---I have queried the data to compare the numbers against themselves. 
+---For example, in the 5th query, I attempted to find out the percentage of people from the total cases were hospitalised?
+---Thank you.
+
+
+
 Select *
 From NYCovidData
 
@@ -31,7 +38,7 @@ Select Date_of_interest, Case_Count, Hospitalized_Count, Death_Count,
 From NYCovidData
 order by 2 DESC
 
---What percentage of the total case count is the hospitalised count? How many people from the total cases were hospitalised
+--What percentage of the total case count is the hospitalised count? How many people from the total cases were hospitalised?
 
 Select Case_Count, Hospitalized_Count, (Case_Count*1.0/Hospitalized_Count) *100 PercentHospitalized
 From NYCovidData
